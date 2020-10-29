@@ -13,7 +13,7 @@ defmodule Shared.Ecto.MixProject do
       deps: deps(),
       aliases: aliases(),
       name: "Jehovakel EX Ecto",
-      source_url: "https://github.com/STUDITEMPS/jehovakel_ex/tree/master/jehovakel_ex_ecto",
+      source_url: "https://github.com/STUDITEMPS/jehovakel_ex_ecto",
       description: description(),
       package: package()
     ]
@@ -57,7 +57,7 @@ defmodule Shared.Ecto.MixProject do
       # These are the default files included in the package
       licenses: ["MIT License"],
       links: %{
-        "GitHub" => "https://github.com/STUDITEMPS/jehovakel_ex/tree/master/jehovakel_ex_ecto",
+        "GitHub" => "https://github.com/STUDITEMPS/jehovakel_ex_ecto",
         "Studitemps" => "https://tech.studitemps.de"
       }
     ]
