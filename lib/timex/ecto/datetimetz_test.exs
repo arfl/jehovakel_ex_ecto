@@ -58,7 +58,7 @@ defmodule Timex.Ecto.Test do
     {:ok, datetime, _} = "2019-10-27 02:15:00+00" |> DateTime.from_iso8601()
     in_db = {datetime, "Europe/Berlin"}
 
-    assert {:ok, %DateTime{std_offset: winter_time_offset} = datetime} =
+    assert {:ok, %DateTime{std_offset: winter_time_offset}} =
              Timex.Ecto.DateTimeWithTimezone.load(in_db)
 
     assert winter_time_offset == 0
