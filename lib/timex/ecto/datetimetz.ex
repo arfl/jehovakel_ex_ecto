@@ -56,19 +56,7 @@ defmodule Timex.Ecto.DateTimeWithTimezone do
   @doc """
   Convert to the native Ecto representation
   """
-  require Logger
-
   def dump(%DateTime{time_zone: tzname} = datetime) do
-    if String.contains?(tzname, "GMT") do
-      stacktrace = Process.info(self(), :current_stacktrace)
-
-      Logger.warn(
-        "Es wird GMT in die DB geschrieben: #{inspect(stacktrace)}, #{
-          inspect(datetime, structs: false)
-        }"
-      )
-    end
-
     in_utc = Timex.set(datetime, timezone: "Etc/UTC")
     {:ok, {in_utc, tzname}}
   end
